@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3826294197">
+    <data-source source="LOCAL" name="PostgreSQL - DishSelectorDB@localhost" uuid="f8111d8b-b3db-4499-9e78-3330a180e5d8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/DishSelectorDB</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfcbdfd8dfd9dfcfdfc4dfd3dfdfdfc1df9bdf93</user-password>
+      <schema-pattern>DishSelectorDB.public</schema-pattern>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

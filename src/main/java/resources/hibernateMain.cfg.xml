@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.url">
+            jdbc:postgresql://localhost:5432/DishSelectorDB
+        </property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">arsenyuk19</property>
+        <property name="connection.pool_size">1</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.generate_statistics">true</property>
+
+        <property name="hibernate.connection.autoReconnect">true</property>
+
+        <property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property>
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.use_query_cache">true</property>
+        <property name="hibernate.cache.provider_configuration_file_resource_path">resources/ehcache.xml</property>
+
+        <mapping class="ua.nure.entity.User"/>
+        <mapping class="ua.nure.entity.Comment"/>
+        <mapping class="ua.nure.entity.Food"/>
+        <mapping class="ua.nure.entity.FoodItem"/>
+        <mapping class="ua.nure.entity.FoodLike"/>
+        <mapping class="ua.nure.entity.History"/>
+        <mapping class="ua.nure.entity.Recipe"/>
+        <mapping class="ua.nure.entity.RecipeItem"/>
+        <mapping class="ua.nure.entity.RecipeLike"/>
+        <mapping class="ua.nure.entity.Tag"/>
+        <mapping class="ua.nure.entity.RecipeTag"/>
+
+
+
+    </session-factory>
+</hibernate-configuration>

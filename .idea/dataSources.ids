@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="PostgreSQL - DishSelectorDB@localhost" uuid="f8111d8b-b3db-4499-9e78-3330a180e5d8">
+    <database-info product="PostgreSQL" version="9.3.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <schema name="public" catalog="DishSelectorDB"/>
+    <table name="Comments" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="commentId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIkNvbW1lbnRzX2NvbW1lbnRJZF9zZXEiJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="recipeId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="text" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="timetz" precision="21" scale="6" nullable="false" jdbcType="92"/>
+      <column name="systemIndex" sqlType="varchar" precision="6" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="Comments_pkey" columns="commentId"/>
+    </table>
+    <table name="Comments_commentId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="FoodItemsList" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="itemId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIkZvb2RJdGVtc0xpc3RfaXRlbUlkX3NlcSInOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="foodId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="count" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mass" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="amount" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="FoodItemsList_pkey" columns="itemId"/>
+    </table>
+    <table name="FoodItemsList_itemId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="FoodLikes" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="likeId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIkZvb2RMaWtlc19saWtlSWRfc2VxIic6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="foodId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="userId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="like" sqlType="int2" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <primary-key name="FoodLikes_pkey" columns="likeId"/>
+    </table>
+    <table name="FoodLikes_likeId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="Foods" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="foodId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIkZvb2RzX2Zvb2RJZF9zZXEiJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="calories" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="fat" sqlType="float4" precision="8" scale="8" nullable="true" jdbcType="7"/>
+      <column name="protein" sqlType="float4" precision="8" scale="8" nullable="true" jdbcType="7"/>
+      <column name="carbohydrate" sqlType="float4" precision="8" scale="8" nullable="true" jdbcType="7"/>
+      <column name="water" sqlType="float4" precision="8" scale="8" nullable="true" jdbcType="7"/>
+      <primary-key name="Foods_pkey" columns="foodId"/>
+    </table>
+    <table name="Foods_foodId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="Histories" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="historyId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIkhpc3Rvcmllc19oaXN0b3J5SWRfc2VxIic6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="recipeId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="userId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="timetz" precision="21" scale="6" nullable="false" jdbcType="92"/>
+      <primary-key name="Histories_pkey" columns="historyId"/>
+    </table>
+    <table name="Histories_historyId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="RecipeItemsList" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="itemId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIlJlY2lwZUl0ZW1zTGlzdF9pdGVtSWRfc2VxIic6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="photo" sqlType="varchar" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="systemIndex" sqlType="varchar" precision="6" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="RecipeItemsList_pkey" columns="itemId"/>
+    </table>
+    <table name="RecipeItemsList_itemId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="RecipeLikes" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="likeId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIlJlY2lwZUxpa2VzX2xpa2VJZF9zZXEiJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="recipeId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="userId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="like" sqlType="int2" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <primary-key name="RecipeLikes_pkey" columns="likeId"/>
+    </table>
+    <table name="RecipeLikes_likeId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="RecipeTags" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="recipeTagId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIlJlY2lwZVRhZ3NfcmVjaXBlVGFnSWRfc2VxIic6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="recipeId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="tagId" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="RecipeTags_pkey" columns="recipeTagId"/>
+    </table>
+    <table name="RecipeTags_recipeTagId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="Recipes" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="recipeId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIlJlY2lwZXNfcmVjaXBlSWRfc2VxIic6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="photo" sqlType="varchar" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
+      <primary-key name="Recipes_pkey" columns="recipeId"/>
+    </table>
+    <table name="Recipes_recipeId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="Tags" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="tagId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIlRhZ3NfdGFnSWRfc2VxIic6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="256" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="Tags_pkey" columns="tagId"/>
+    </table>
+    <table name="Tags_tagId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="Users" schema="public" catalog="DishSelectorDB" type="TABLE">
+      <column name="userId" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnIlVzZXJzX3VzZXJJZF9zZXEiJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="socialId" sqlType="varchar" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="privilege" sqlType="privilege" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="networkType" sqlType="networktype" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="Users_pkey" columns="userId"/>
+    </table>
+    <table name="Users_userId_seq" schema="public" catalog="DishSelectorDB" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+  </data-source>
+</component>
